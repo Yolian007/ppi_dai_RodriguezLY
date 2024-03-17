@@ -18,9 +18,7 @@ Existe una demanda creciente por parte de las empresas de transporte de contar c
 
 ¡Hola! Soy **Linder Rodriguez** 👋
 
-### Sobre Mí
-
-Soy un freelancer especializado en el desarrollo de aplicaciones en diferentes plataformas. Mi enfoque se centra en proporcionar soluciones de calidad y personalizadas que respondan a las necesidades específicas de mis clientes, asegurando siempre su satisfacción y superando sus expectativas.
+Soy freelancer en el desarrollo de aplicaciones en diferentes plataformas. Mi enfoque se centra en proporcionar soluciones de calidad y personalizadas que respondan a las necesidades específicas de mis clientes, asegurando siempre su satisfacción y superando sus expectativas.
 
 ### Colaboración
 
@@ -43,6 +41,3 @@ Puedes encontrarme y contactarme a través de:
 
 **Conocimientos**: Python, React Native, FlutterFlow, JavaScript.
 
----
-
-Te invito a trabajar juntos en este emocionante proyecto. ¡Hagamos algo increíble!
