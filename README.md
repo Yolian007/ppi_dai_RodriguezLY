@@ -28,10 +28,11 @@ Si estás buscando un profesional dedicado y comprometido para tu próximo proye
 
 Puedes encontrarme y contactarme a través de:
 
-- **LinkedIn**
-- **GitHub**
-- **Facebook**
-- **Correo Electrónico**: lirodriguezco@unal.edu.co
+- [LinkedIn](http://www.linkedin.com/in/linder-yolian-rodriguez-cortes-05ba592b9)
+- [GitHub](https://github.com/Yolian007)
+- [Facebook](https://www.facebook.com/voy.lyrc/)
+- [Correo](lirodriguezco@unal.edu.co)
+
 
 ### Información Personal
 
