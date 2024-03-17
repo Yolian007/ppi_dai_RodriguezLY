@@ -1,4 +1,4 @@
-# Rastreo de Flotas en Tiempo Real
+# NavigateFleet (Rastreo de Flotas en Tiempo Real)
 
 ## Descripción de la Idea
 Esta aplicación está diseñada para empresas de transporte que buscan optimizar la gestión de sus flotas. Permite el rastreo en tiempo real de cada vehículo, ofreciendo información detallada sobre la ubicación actual, la velocidad, el consumo de combustible, y mucho más. El objetivo es mejorar la eficiencia operativa y reducir costos mediante el uso de tecnología avanzada.
