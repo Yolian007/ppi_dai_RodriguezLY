@@ -33,6 +33,8 @@ Puedes encontrarme y contactarme a través de:
 - [Facebook](https://www.facebook.com/voy.lyrc/)
 - [Correo](mailto:lirodriguezco@unal.edu.co)
 
+### Si quieres apollarme puedes ingresar a:
+- [Buy me a coffe](https://www.buymeacoffee.com/yolian)
 
 ### Información Personal
 
