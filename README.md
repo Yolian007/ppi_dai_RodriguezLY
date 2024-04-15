@@ -1,6 +1,7 @@
 # sportsevents (Buscador de eventos para fanáticos del deporte)
 
-## Descripción: Una aplicación que ayuda a los aficionados a encontrar eventos deportivos locales, como partidos, torneos y encuentros de aficionados, basándose en sus intereses y ubicación.
+## Descripción 
+Una aplicación que ayuda a los aficionados a encontrar eventos deportivos locales, como partidos, torneos y encuentros de aficionados, basándose en sus intereses y ubicación.
 
 ## Justificación
 Los aficionados al deporte a menudo buscan eventos locales para asistir o participar, y una aplicación que facilite esta búsqueda podría ser muy popular.
