@@ -1,4 +1,4 @@
-# sportsevents (Buscador de eventos para fanáticos del deporte)
+# Sports Connect
 
 ## Descripción 
 Una aplicación que ayuda a los aficionados a encontrar eventos deportivos locales, como partidos, torneos y encuentros de aficionados, basándose en sus intereses y ubicación.
