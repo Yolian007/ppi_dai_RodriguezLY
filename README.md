@@ -15,6 +15,10 @@ Los aficionados al deporte a menudo buscan eventos locales para asistir o partic
 - **Scipy**: Análisis de conglomerados (Clustering) para la segmentación de usuarios: utilizar el módulo de clustering de SciPy para agrupar a los usuarios en función de sus preferencias deportivas y su ubicación geográfica. Esto permitirá a la aplicación recomendar eventos deportivos que sean más relevantes para cada segmento de usuarios, mejorando la personalización de las sugerencias.
 - **Geopandas**: Mapeo de la ubicación de eventos deportivos y cálculo de distancias y rutas desde la ubicación del usuario.
 
+
+## Importante
+Este proyecto esta hecho con python en el entorno de Flask, por ello se debe implementar el entorno virtial de Flask a tu proyecto antes de clonar el repositorio.
+
 # Hola, soy Linder Rodriguez👋
 
 ## Sobre Mí
