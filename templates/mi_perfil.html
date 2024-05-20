@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Sports Connect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='imgs/Logo.png') }}" alt="Logo Sports Connect">
+            <span>Sports Connect</span>
+        </div>
+        <nav class="icons">
+            <ul>
+                <li><a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='imgs/home_icon.png') }}" alt="Home"></a></li>
+                <li><a href="#"><img src="{{ url_for('static', filename='imgs/calendario.png') }}" alt="Events"></a></li>
+                <li><a href="#"><img src="{{ url_for('static', filename='imgs/personas.png') }}" alt="People"></a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <div class="user-icon" onclick="toggleMenu()">
+                <img src="{{ url_for('static', filename='imgs/user_icon.png') }}" alt="User">
+            </div>
+            <div id="userDropdown" class="dropdown-content">
+                <a href="{{ url_for('events.mi_perfil') }}">Perfil</a>
+                <a href="{{ url_for('login.settings') }}">Configuración</a>
+                <a href="{{ url_for('index') }}">Salir</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>Mi Perfil</h1>
+        <button onclick="openModal()">Crear Evento</button>
+
+        <!-- Tarjetas de eventos -->
+        <div class="events-container">
+            {% for event in events %}
+            <div class="event-card" onclick="openEventModal('{{ event.name }}', '{{ event.date }}', '{{ event.department }}', '{{ event.municipality }}', '{{ event.address }}', '{{ event.type }}', '{{ event.participants }}', '{{ event.duration }}', '{{ event.description }}')">
+                <h3>{{ event.name }}</h3>
+                <p>Tipo: {{ event.type }}</p>
+                <p>Ubicación: {{ event.municipality }}, {{ event.department }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Modal de crear evento -->
+        <div id="createEventModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Crear Evento</h2>
+                <form action="{{ url_for('events.create_event') }}" method="post">
+                    <label for="event_name">Nombre del Evento</label>
+                    <input type="text" id="event_name" name="event_name" required>
+                    
+                    <label for="event_date">Fecha del Evento</label>
+                    <input type="date" id="event_date" name="event_date" required>
+                    
+                    <label for="department">Departamento</label>
+                    <input type="text" id="department" name="department" required>
+                    
+                    <label for="municipality">Municipio</label>
+                    <input type="text" id="municipality" name="municipality" required>
+                    
+                    <label for="address">Dirección</label>
+                    <input type="text" id="address" name="address" required>
+                    
+                    <label for="event_type">Tipo de Evento</label>
+                    <input type="text" id="event_type" name="event_type" required>
+                    
+                    <label for="num_participants">Número de Participantes</label>
+                    <input type="number" id="num_participants" name="num_participants" required>
+                    
+                    <label for="event_duration">Duración del Evento (horas)</label>
+                    <input type="number" id="event_duration" name="event_duration" required>
+                    
+                    <label for="event_description">Descripción del Evento</label>
+                    <textarea id="event_description" name="event_description" required></textarea>
+                    
+                    <button type="submit">Crear Evento</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal de detalles del evento -->
+        <div id="eventDetailsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeEventModal()">&times;</span>
+                <h2 id="event-title">
+                    <span id="event-name"></span>
+                    <button class="delete-btn" onclick="deleteEvent()">Eliminar</button>
+                </h2>
+                <p id="event-date"></p>
+                <p id="event-location"></p>
+                <p id="event-type"></p>
+                <p id="event-participants"></p>
+                <p id="event-duration"></p>
+                <p id="event-description"></p>
+
+                <!-- Botón de ver en el mapa -->
+                <button class="map-btn" onclick="viewEventOnMap()">Ver en el mapa</button>
+
+                <!-- Formulario de edición -->
+                <form id="editEventForm" action="{{ url_for('events.edit_event') }}" method="post">
+                    <input type="hidden" id="edit_event_name" name="event_name">
+                    <label for="edit_event_date">Fecha del Evento</label>
+                    <input type="date" id="edit_event_date" name="event_date" required>
+                    
+                    <label for="edit_department">Departamento</label>
+                    <input type="text" id="edit_department" name="department" required>
+                    
+                    <label for="edit_municipality">Municipio</label>
+                    <input type="text" id="edit_municipality" name="municipality" required>
+                    
+                    <label for="edit_address">Dirección</label>
+                    <input type="text" id="edit_address" name="address" required>
+                    
+                    <label for="edit_event_type">Tipo de Evento</label>
+                    <input type="text" id="edit_event_type" name="event_type" required>
+                    
+                    <label for="edit_num_participants">Número de Participantes</label>
+                    <input type="number" id="edit_num_participants" name="num_participants" required>
+                    
+                    <label for="edit_event_duration">Duración del Evento (horas)</label>
+                    <input type="number" id="edit_event_duration" name="event_duration" required>
+                    
+                    <label for="edit_event_description">Descripción del Evento</label>
+                    <textarea id="edit_event_description" name="event_description" required></textarea>
+                    
+                    <button type="submit">Guardar Cambios</button>
+                </form>
+
+                <!-- Formulario de eliminación -->
+                <form id="deleteEventForm" action="{{ url_for('events.delete_event') }}" method="post">
+                    <input type="hidden" id="delete_event_name" name="event_name">
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal de mapa del evento -->
+        <div id="eventMapModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeMapModal()">&times;</span>
+                <h2>Mapa del Evento</h2>
+                <iframe id="event-map" src="" width="100%" height="400px" frameborder="0"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+    <script>
+        function openModal() {
+            document.getElementById('createEventModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('createEventModal').style.display = 'none';
+        }
+
+        function openEventModal(name, date, department, municipality, address, type, participants, duration, description) {
+            document.getElementById('event-name').innerText = name;
+            document.getElementById('event-date').innerText = `Fecha: ${date}`;
+            document.getElementById('event-location').innerText = `Ubicación: ${address}, ${municipality}, ${department}`;
+            document.getElementById('event-type').innerText = `Tipo: ${type}`;
+            document.getElementById('event-participants').innerText = `Participantes: ${participants}`;
+            document.getElementById('event-duration').innerText = `Duración: ${duration} horas`;
+            document.getElementById('event-description').innerText = `Descripción: ${description}`;
+
+            // Rellenar el formulario de edición con los datos del evento
+            document.getElementById('edit_event_name').value = name;
+            document.getElementById('edit_event_date').value = date;
+            document.getElementById('edit_department').value = department;
+            document.getElementById('edit_municipality').value = municipality;
+            document.getElementById('edit_address').value = address;
+            document.getElementById('edit_event_type').value = type;
+            document.getElementById('edit_num_participants').value = participants;
+            document.getElementById('edit_event_duration').value = duration;
+            document.getElementById('edit_event_description').value = description;
+
+            // Rellenar el formulario de eliminación con el nombre del evento
+            document.getElementById('delete_event_name').value = name;
+
+            document.getElementById('eventDetailsModal').style.display = 'block';
+        }
+
+        function closeEventModal() {
+            document.getElementById('eventDetailsModal').style.display = 'none';
+        }
+
+        function deleteEvent() {
+            if (confirm('¿Estás seguro de que deseas eliminar este evento?')) {
+                document.getElementById('deleteEventForm').submit();
+            }
+        }
+
+        function viewEventOnMap() {
+            const eventName = document.getElementById('event-name').innerText;
+            const eventMapIframe = document.getElementById('event-map');
+            eventMapIframe.src = `/events/view_event_map/${encodeURIComponent(eventName)}`;
+            document.getElementById('eventMapModal').style.display = 'block';
+        }
+
+        function closeMapModal() {
+            document.getElementById('eventMapModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
