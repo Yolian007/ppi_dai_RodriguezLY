@@ -26,19 +26,22 @@ Si estás buscando un profesional dedicado y comprometido para tu próximo proye
 ## Contacto
 Puedes encontrarme y contactarme a través de:
 
-- [LinkedIn](http://www.linkedin.com/in/linder-yolian-rodriguez-cortes-05ba592b9)
-- [GitHub](https://github.com/Yolian007)
-- [Facebook](https://www.facebook.com/voy.lyrc/)
-- [Correo](mailto:lirodriguezco@unal.edu.co)
+<p align="left">
+  <a href="http://www.linkedin.com/in/linder-yolian-rodriguez-cortes-05ba592b9"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn" width="32"></a>
+  <a href="https://github.com/Yolian007"><img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub" width="32"></a>  
+  <a href="https://stackoverflow.com/users/24090991/albeiro-burbano"><img src="https://raw.githubusercontent.com/AlbeiroBurbano/ImagenesIconos/main/overflow.png" alt="Stack Overflow" width="32"></a>
+  <a href="mailto:lirodriguezco@unal.edu.co"><img src="https://img.icons8.com/fluent/48/000000/mail.png" alt="Email" width="32"></a>
+   <a href="https://www.facebook.com/voy.lyrc/"><img src="https://github.com/Yolian007/Informacion/blob/main/Datos%20ppi/facebook.png?raw=true" alt="Email" width="32"></a>
+</p>
+ 
 
 ### Si quieres apoyarme puedes ingresar a:
 
-[Buy me a coffe](https://www.buymeacoffee.com/yolian)
+ <a href="https://www.buymeacoffee.com/yolian"><img src="https://github.com/Yolian007/Informacion/blob/main/Datos%20ppi/dinero.png?raw=true" alt="Email" width="32"></a>
 
 ## Mis canales de freelancer son:
-- [freelancer](https://www.freelancer.com.co/u/Yolian007)
-- [Upwork](https://www.upwork.com/freelancers/~01c56d0167aff56423)
-
+  <a href="https://www.freelancer.com.co/u/Yolian007"><img src="https://raw.githubusercontent.com/AlbeiroBurbano/ImagenesIconos/main/freelancer.png" alt="Freelancer" width="32"></a>
+  <a href="https://www.upwork.com/freelancers/~01c56d0167aff56423"><img src="https://raw.githubusercontent.com/AlbeiroBurbano/ImagenesIconos/main/upwork.png" alt="Upwork" width="32"></a>
 ## Información Personal
 
 **Creador del Repositorio**: Linder Yolian Rodriguez Cortes
